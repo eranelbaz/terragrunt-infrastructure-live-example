@@ -64,6 +64,11 @@ include "common" {
   expose = true
 }
 
+include "hooks" {
+  path = "${dirname(find_in_parent_folders("root.hcl"))}/common/hooks.hcl"
+  expose = true
+}
+
 include "region" {
   path  = find_in_parent_folders("region.hcl")
   expose = true

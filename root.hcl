@@ -18,6 +18,8 @@ locals {
   account_name = local.account_vars.locals.account_name
   account_id   = local.account_vars.locals.aws_account_id
   aws_region   = local.region_vars.locals.aws_region
+
+  # Generate directory structure
 }
 
 # Generate an AWS provider block
@@ -48,3 +50,4 @@ inputs = merge(
   local.region_vars.locals,
   local.environment_vars.locals,
 )
+
