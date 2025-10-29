@@ -1,0 +1,9 @@
+version: 2
+
+deploy:
+  steps:
+    opentofuInit:
+      before:
+        - name: Generate Files
+          run: |
+            /opt/packages/bin/terragrunt run-all init
